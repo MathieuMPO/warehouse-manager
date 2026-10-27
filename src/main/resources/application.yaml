@@ -1,3 +1,13 @@
 spring:
   application:
     name: warehouse-manager
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jwt:
+    secret: ${JWT_SECRET}
+    accessTokenExpiration: 7200
+    refreshTokenExpiration: 604800
+  profiles:
+    active: dev
